@@ -2,7 +2,8 @@
 
 float i = 0;
 void setup() {
-  size(800, 800);
+  //size(800, 800);
+  fullScreen();
   background(255, 155, 0);
 }
 
