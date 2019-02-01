@@ -1,17 +1,20 @@
 class Ant {
-  PImage img;
+  PImage walk;
+  Animation c1; 
+  int imgCount = 228;
+  // boolean[] loadStates = new boolean[imgCount      
   float x = random(0, width);
   float y = random(0, height);
-  int w = 10;
-  float vX = random(-10, 10);
-  float vY = random(-1.5, 1.5);
-  
+  int w = height/15;
+  float vX = -10;
+  float vY = 0;
   
   Ant(){
-    img = loadImage("people-walking.png");
+    c1 = new Animation("ants/Comp 2_", 95);
   }
-
+  
   void display() {
+    
     x = x + vX;
     y= y + vY;
     stroke(0);
@@ -20,8 +23,9 @@ class Ant {
     //textSize(100);
     //textAlign(CENTER);
     //text("G A M E  O V E R", width/2, height/2);
-    scale(-1,1);
-    image(img, x,y);
+    scale(-1, 1);
+    c1.display(x,y);
+
     //if(vX < 0){
     //  pushMatrix();
     //  translate(img.width,0);
@@ -31,9 +35,8 @@ class Ant {
     //} else {
     //  image(img, x,y);
     //}
-    
   }
- 
+
   void move() {
     x = x + vX;
     y = y + vY;

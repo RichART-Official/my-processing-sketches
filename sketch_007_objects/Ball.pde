@@ -8,7 +8,14 @@ class Ball {
 
   color c;
 
-  public Ball(float bX, float bY, float bW, float bVX, float bVY, color bC) {
+  public Ball(
+  float bX, 
+  float bY, 
+  float bW, 
+  float bVX, 
+  float bVY, 
+  color bC
+  ) {
     x = bX;
     y = bY;
     w = bW;

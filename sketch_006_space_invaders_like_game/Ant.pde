@@ -6,12 +6,12 @@ class Ant {
   float vX = random(-2.5, 2.5);
   float vY = random(-2.5, 2.5);
 
-  void display() {
+  void display(int s) {
     x = x + vX;
     y= y + vY;
     stroke(0);
     // fill(0, random(0,155), random(0,255));
-    triangle(x +20 ,y -20,x,y,x + 40,y + 40);
+    ellipse(x,y,s,s);
     //textSize(100);
     //textAlign(CENTER);
     //text("G A M E  O V E R", width/2, height/2);
